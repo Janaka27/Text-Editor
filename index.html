@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Online Text Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="toolbar">
+    <button onclick="format('bold')" class="btn">
+      <span class="material-icons">
+        format_bold
+      </span>
+    </button>
+    <button onclick="format('italic')" class="btn">
+      <span class="material-icons">
+        format_italic
+      </span>
+    </button>
+    <button onclick="format('underline')" class="btn">
+      <span class="material-icons">
+        format_underlined
+      </span>
+    </button>
+
+    <input type="color" id="fontColor" onchange="changeColor()" title="Font Color">
+
+    <button onclick="align('justifyLeft')" class="btn">
+      <span class="material-icons">format_align_left</span>
+    </button>
+    <button onclick="align('justifyCenter')" class="btn">
+      <span class="material-icons">format_align_center</span>
+    </button>
+    <button onclick="align('justifyRight')" class="btn">
+      <span class="material-icons">format_align_right</span>
+    </button>
+    <button onclick="align('justifyFull')" class="btn">
+      <span class="material-icons">format_align_justify</span>
+    </button>
+
+    <button onclick="undo()" class="btn">
+      <span class="material-icons">undo</span>
+    </button>
+    <button onclick="redo()" class="btn">
+      <span class="material-icons">redo</span>
+    </button>
+  </div>
+
+  <div id="editor" contenteditable="true">
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
